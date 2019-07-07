@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # Developmentの名前
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  # A Podをいくつ起動するか？
+  replicas: 3
+  # B Podの定義テンプレート
+  template:
+    metadata:
+      # A Podのラベルを設定している
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.15.7
+        ports:
+        - containerPort: 80

@@ -1,0 +1,36 @@
+
+profile golang-apparmor-profile flags=(attach_disconnected,mediate_deleted) {
+
+  network,
+
+  /bin/bash rix,
+
+
+  /bin/rbash r,
+  /etc/ld.so.cache r,
+  /etc/nsswitch.conf r,
+  /etc/passwd r,
+  /lib/x86_64-linux-gnu/ld-2.24.so r,
+  /lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 r,
+  /lib/x86_64-linux-gnu/libc-2.24.so r,
+  /lib/x86_64-linux-gnu/libc.so.6 r,
+  /lib/x86_64-linux-gnu/libdl-2.24.so r,
+  /lib/x86_64-linux-gnu/libdl.so.2 r,
+  /lib/x86_64-linux-gnu/libnsl-2.24.so r,
+  /lib/x86_64-linux-gnu/libnsl.so.1 r,
+  /lib/x86_64-linux-gnu/libnss_compat-2.24.so r,
+  /lib/x86_64-linux-gnu/libnss_compat.so.2 r,
+  /lib/x86_64-linux-gnu/libnss_files-2.24.so r,
+  /lib/x86_64-linux-gnu/libnss_files.so.2 r,
+  /lib/x86_64-linux-gnu/libnss_nis-2.24.so r,
+  /lib/x86_64-linux-gnu/libnss_nis.so.2 r,
+  /lib/x86_64-linux-gnu/libtinfo.so.5 r,
+  /lib/x86_64-linux-gnu/libtinfo.so.5.9 r,
+  /lib64/ld-linux-x86-64.so.2 r,
+  /usr/lib/x86_64-linux-gnu/libdl.so r,
+  /usr/lib/x86_64-linux-gnu/libnsl.so r,
+  /usr/lib/x86_64-linux-gnu/libnss_compat.so r,
+  /usr/lib/x86_64-linux-gnu/libnss_files.so r,
+  /usr/lib/x86_64-linux-gnu/libnss_nis.so r,
+
+}
